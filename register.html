@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - Cafe In Aja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        <!-- Logo & Back Button -->
+        <div class="header-section">
+            <a href="index.html" class="back-btn">← Kembali</a>
+            <div class="logo">
+                <img src="logo.png" alt="Cafe In Aja">
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="form-box">
+            <h3 class="form-title">Daftar Akun Baru</h3>
+            <p class="form-subtitle">Buat akun untuk akses Cafe In Aja</p>
+            
+            <input type="text" id="fullName" placeholder=" Nama Lengkap" maxlength="50">
+            <input type="text" id="username" placeholder=" Username" maxlength="20">
+            <input type="password" id="password" placeholder=" Password" maxlength="20">
+            <input type="password" id="confirmPassword" placeholder=" Konfirmasi Password" maxlength="20">
+            
+            <button class="login-btn register-submit-btn" id="registerBtn">
+             DAFTAR
+            </button>
+            
+            <div class="login-link">
+                Sudah punya akun? <a href="index.html">Masuk sekarang</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success message -->
+    <div id="successMsg" class="success">
+        Pendaftaran berhasil! Silakan login dengan akun baru Anda ☕✨
+    </div>
+
+    <!-- Error message -->
+    <div id="errorMsg" class="error">
+        Username sudah terdaftar! Gunakan username lain.
+    </div>
+
+    <script src="script.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Cafe</title>
+    <link rel="stylesheet" href="dasboard.css">
+</head>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="logo-1">
+        <img src="logo.png" alt="Logo-1">
+        <h1>CAFE IN AJA</h1>
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder=" Cari menu..." id="searchInput">
+    </div>
+
+    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+    <div class="logo-1">
+        <img src="logo.png" alt="Logo-1">
+        <h3>CAFE IN AJA</h3>
+        <div class="menu-btn" onclick="toggleSidebar()"><H4>X</H4></div>
+    </div>
+    
+    <ul>
+        <li onclick="goToProfile()">👤 Profil</li>
+        <li onclick="goToOrders()">🛍️ Pesanan</li>
+        <li onclick="goToSupport()">📞 Customer Service</li>
+    </ul>
+
+       <div class="logout" onclick="logout(); return false;">🚪 Logout</div>
+</div>
+   
+</div>
+
+<!-- CATEGORY -->
+<div class="categories">
+    <div class="cat active" data-category="all">ALL</div>
+    <div class="cat" data-category="coffee">COFFEE</div>
+    <div class="cat" data-category="non-coffee">NON COFFEE</div>
+    <div class="cat" data-category="food">FOOD</div>
+</div>
+<!-- MENU -->
+<div class="menu" id="menuList"></div>
+
+<!-- CART -->
+<div class="order-footer-container" id="orderFooterContainer">
+    <div class="order-footer" id="orderFooter">
+        <div class="order-summary">
+            <div class="item-count" id="itemCount">
+                <span id="count">0</span> Item
+            </div>
+            <div class="total-price">
+                TOTAL: <strong id="total">Rp 0</strong>
+            </div>
+        </div>
+        <button class="confirm-btn" onclick="confirmOrder()" id="confirmBtn">
+            KONFIRMASI PESANAN
+        </button>
+    </div>
+</div>
+<script src="dasboard.js"></script>
+<!-- FOOTER CAFE IN AJA -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+
+            <h2>CAFE IN AJA <br><span>Sip Your Coffee, Feel The Vibe</span></h2>
+            <div class="contact">
+                <p>📧 cafeinaja@gmail.com</p>
+                <p>📞 0831-4186-9561</p>
+                <p>📍 pangkalpinang</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div>
+                <h4>Menu</h4>
+                <ul>
+                    <li>Coffee</li>
+                    <li>Non Coffee</li>
+                    <li>Food</li>
+                    <li>Promo</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li>Tentang Kami</li>
+                    <li>Kontak</li>
+                    <li>Karir</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h4>Stay Connected!</h4>
+            <div class="subscribe">
+                <input type="email" id="emailInput" placeholder="Email untuk promo">
+                <button onclick="subscribeNewsletter()">Berlangganan</button>
+            </div>
+            <div class="social">
+                <span onclick="openSocial('instagram')">📷</span>
+                <span onclick="openSocial('facebook')">📘</span>
+                <span onclick="openSocial('tiktok')">🎵</span>
+                <span onclick="openSocial('whatsapp')">💬</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 CAFE IN AJA. All Rights Reserved.</p>
+        <div>
+            <span>Privacy Policy</span> |
+            <span>Terms of Service</span> |
+            <span>Return Policy</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

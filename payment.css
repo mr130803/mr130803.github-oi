@@ -1,0 +1,655 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 0;
+}
+
+/* Animated coffee background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('kopi.png') top no-repeat;
+    background-size: 2000px;
+    z-index: -1;
+}
+/* HEADER COKLAT - FIXED WIDTH */
+.header {
+    background: linear-gradient( to right, rgb(61, 22, 3),
+            rgba(117, 52, 15, 0.737));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 15px rgba(91, 44, 27, 0.3);
+}
+
+.logo-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-1 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo-1 h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+.header-title {
+    font-size: 16px;
+    font-weight: 500;
+    background: rgba(255,255,255,0.2);
+    padding: 6px 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    width: 60%;
+    margin: 0px auto;
+    background: white;
+    border-radius: 15px;
+    border: 3px solid black;
+    padding: 120px;
+
+}
+
+.payment-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.title {
+    width: 30%;
+    margin: 20px auto;
+    background: rgba(66, 23, 0, 0.721);
+    border-radius: 15px;
+    border: 3px #C08552;
+    padding: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 5px;
+    color:#ffffff;
+     }
+
+/* Order Summary */
+.order-summary {
+    background: linear-gradient(135deg, #fff7e6, #ffe8cc);
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    border: 2px solid rgba(139, 69, 19, 0.2);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: #6b4c2e;
+    font-size: 15px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 300px;
+    font-weight: bold;
+    color: #5b2c1b;
+    padding-top: 12px;
+    border-top: 2px dashed rgba(139, 69, 19, 0.3);
+}
+
+#totalAmount {
+    color: #d2691e;
+    font-size: 26px;
+}
+
+/* Payment Methods */
+.methods-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.method-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.method-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.method-card.active {
+    background: linear-gradient(135deg, #5b2c1b, #8b4513);
+    color: white;
+    border-color: #a0522d;
+}
+
+.method-emoji {
+    font-size: 28px;
+}
+
+.method-card h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.method-card p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Selection Panels */
+.selection-panel {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+.selection-panel h4 {
+    color: #5b2c1b;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.bank-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.bank-option {
+    padding: 15px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #eee;
+}
+
+.bank-option:hover, .bank-option.active {
+    border-color: #8b4513;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.2);
+}
+
+.bank-option img {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.bank-option span {
+    font-weight: bold;
+    color: #333;
+    font-size: 13px;
+}
+
+/* QRIS */
+.qris-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.qris-image {
+    width: 180px;
+    height: 180px;
+    border: 3px solid #f0f0f0;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.qris-text h4 {
+    color: #5b2c1b;
+    margin-bottom: 10px;
+}
+
+.qris-amount {
+    background: linear-gradient(135deg, #5b2c1b, #8b4513);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Confirm Button */
+.confirm-btn {
+    width: 100%;
+    padding: 20px;
+    background: r;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(84, 42, 0, 0.4);
+}
+
+.confirm-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(40, 167, 69, 0.6);
+}
+
+.hidden {
+    display: none !important;
+}
+/* Tambah di CSS Anda */
+.order-details {
+    background: rgba(62, 19, 2, 0.635);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 50px;
+    margin-bottom: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    color: #ffffff;
+     font-size: 15px;
+    font-weight: bold;
+
+}
+
+.order-item-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 14px;
+}
+
+.order-item-detail:last-child {
+    border-bottom: none;
+}
+
+.item-name-detail {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.item-price-detail {
+    color: #6c757d;
+}
+
+.total-price-detail {
+    font-weight: bold;
+    color: #5b2c1b;
+    font-size: 16px;
+    padding-top: 10px;
+    border-top: 2px solid #dee2e6;
+    margin-top: 10px;
+}
+/* Tambah ke CSS Anda */
+.bank-panel, .qris-panel, .confirm-section {
+    background: #65200290;
+    border-radius: 18px;
+    padding: 25px;
+    margin: 20px 0;
+
+}
+
+.bank-options {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bank-card {
+    padding: 20px;
+    text-align: center;
+    background: rgb(90, 33, 0);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid #eee;
+    min-width: 100px;
+}
+
+.bank-card:hover {
+    border-color: #5b2c1b;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(91,44,27,0.2);
+}
+
+.bank-card img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.qris-code {
+    width: 220px;
+    height: 220px;
+    border: 3px solid #ddd;
+    border-radius: 15px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.btn-qris, .btn-confirm {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-qris:hover, .btn-confirm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(40,167,69,0.4);
+}
+.total  {      background: rgba(62, 19, 2, 0.635);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+   
+    font-size: 24px;
+    font-weight: bold;
+    
+    margin-bottom: 25px;
+    color:#ffffff;
+}
+/* FOOTER CAFE */
+.footer {
+    background: linear-gradient(to right, #5b2c1b, #8b4513, #a0522d);
+    color: #fff;
+    padding: 40px 60px 20px;
+    margin-top: 60px; /* Space dari order footer */
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #fff, rgba(255,255,255,0.5), #fff);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    position: relative;
+    left: -40px;
+    top: 20px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-left h2 {
+    position: relative;
+    left: 60px;
+    top: -50px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.footer-left h2 span {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.contact p {
+    position: relative;
+    top: -30px;
+    margin: 25px 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-links h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.footer-links li:hover {
+    background: rgba(255,255,255,0.1);
+    padding-left: 10px;
+    color: #ffd700;
+}
+
+.footer-right h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.subscribe {
+    display: flex;
+    background: rgba(255,255,255,0.1);
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+}
+
+.subscribe input {
+    border: none;
+    padding: 15px 20px;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    flex: 1;
+    font-size: 14px;
+}
+
+.subscribe input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.subscribe button {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    border: none;
+    padding: 15px 25px;
+    color: #5b2c1b;
+    cursor: pointer;
+    border-radius: 0 30px 30px 0;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subscribe button:hover {
+    background: linear-gradient(135deg, #ffed4e, #ffd700);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+}
+
+.social span {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+}
+
+.social span:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    color: #ffd700;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-bottom p {
+    opacity: 0.8;
+}
+
+.footer-bottom div span {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.footer-bottom div span:hover {
+    background: rgba(255,255,255,0.1);
+    color: #ffd700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 30px 30px 20px;
+    }
+    
+    .footer-links {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 20px 20px;
+        margin-top: 40px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-left h2 {
+        font-size: 20px;
+    }
+    
+    .social {
+        justify-content: center;
+    }
+}

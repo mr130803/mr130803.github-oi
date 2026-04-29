@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - Cafe In Aja</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo-1">
+            <img src="logo.png" alt="Logo-1">
+            <h1>CAFE IN AJA</h1>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- RINCIAN PESANAN -->
+        <div class="order-details" id="orderDetails"></div>
+        
+
+    <div class="total" id="totalHarga"></div>
+    <div class="title">PILIH METODE PEMBAYARAN</div>
+        <!-- METODE PEMBAYARAN -->
+        <div class="payment-methods">
+            <div class="method-card active" onclick="selectMethod('cash')">
+                <div class="method-icon">💰</div>
+                <div class="method-info">
+                    <h3>Bayar di Tempat</h3>
+                    <p>Tunai langsung ke kasir</p>
+                </div>
+            </div>
+            <div class="method-card" onclick="selectMethod('debit')">
+                <div class="method-icon">💳</div>
+                <div class="method-info">
+                    <h3>Debit</h3>
+                    <p>BCA, Mandiri, BRI</p>
+                </div>
+            </div>
+            <div class="method-card" onclick="selectMethod('qris')">
+                <div class="method-icon">📱</div>
+                <div class="method-info">
+                    <h3>QRIS</h3>
+                    <p>Scan & Transfer</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BANK PILIHAN -->
+        <div id="bankPanel" class="bank-panel" style="display:none;">
+            <h4>Pilih Bank:</h4>
+            <div class="bank-options">
+                <div class="bank-card" onclick="confirmDebit('bca')">
+                    <img src="images/bca.png" alt="BCA">
+                    <span>BCA</span>
+                </div>
+                <div class="bank-card" onclick="confirmDebit('mandiri')">
+                    <img src="images/mandiri.png" alt="Mandiri">
+                    <span>Mandiri</span>
+                </div>
+                <div class="bank-card" onclick="confirmDebit('bri')">
+                    <img src="images/bri.png" alt="BRI">
+                    <span>BRI</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- QRIS -->
+        <div id="qrisPanel" class="qris-panel" style="display:none;">
+            <div class="qris-container">
+                <img src="images/qris-cafeinaja.png" alt="QRIS" class="qris-code">
+                <div class="qris-info">
+                    <h4>Scan & Transfer</h4>
+                    <p>OVO • DANA • GOPAY • ShopeePay</p>
+                    <div class="qris-amount">Rp <span id="qrisAmount">0</span></div>
+                    <button class="btn-qris" onclick="confirmQris()">✅ Transfer Berhasil</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- KONFIRMASI UNTUK CASH -->
+        <div id="cashConfirm" class="confirm-section" style="display:none;">
+            <div class="confirm-info">
+                <h4>Bayar ke Kasir</h4>
+                <p>Silakan bayar tunai ke kasir terdekat</p>
+                <button class="btn-confirm" onclick="completePayment('cash')"> KONFIRMASI </button>
+            </div>
+        </div>
+
+        <div class="action-buttons" style="display:none;" id="backBtn">
+            <button class="btn btn-secondary" onclick="window.history.back()">← Kembali</button>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+
+            <h2>CAFE IN AJA <br><span>Sip Your Coffee, Feel The Vibe</span></h2>
+            <div class="contact">
+                <p>📧 cafeinaja@gmail.com</p>
+                <p>📞 0831-4186-9561</p>
+                <p>📍 pangkalpinang</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div>
+                <h4>Menu</h4>
+                <ul>
+                    <li>Coffee</li>
+                    <li>Non Coffee</li>
+                    <li>Food</li>
+                    <li>Promo</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li>Tentang Kami</li>
+                    <li>Kontak</li>
+                    <li>Karir</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h4>Stay Connected!</h4>
+            <div class="subscribe">
+                <input type="email" id="emailInput" placeholder="Email untuk promo">
+                <button onclick="subscribeNewsletter()">Berlangganan</button>
+            </div>
+            <div class="social">
+                <span onclick="openSocial('instagram')">📷</span>
+                <span onclick="openSocial('facebook')">📘</span>
+                <span onclick="openSocial('tiktok')">🎵</span>
+                <span onclick="openSocial('whatsapp')">💬</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 CAFE IN AJA. All Rights Reserved.</p>
+        <div>
+            <span>Privacy Policy</span> |
+            <span>Terms of Service</span> |
+            <span>Return Policy</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

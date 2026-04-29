@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard - Cafe In Aja</title>
+</head>
+<body>
+    <h1>🛠️ ADMIN DASHBOARD</h1>
+    <p>Selamat datang, <strong id="userName"></strong>!</p>
+    <button onclick="logout()">Logout</button>
+    
+    <script>
+        // Load user info
+        document.getElementById('userName').textContent = sessionStorage.getItem('userFullName') || 'Admin';
+        
+        function logout() {
+            sessionStorage.clear();
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

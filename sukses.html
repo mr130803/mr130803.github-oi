@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan Berhasil - Cafe In Aja</title>
+    <link rel="stylesheet" href="sukses.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1>CAFE IN AJA</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="success-icon">✅</div>
+        <h1>Pembayaran Berhasil!</h1>
+        <p>Pesanan sedang diproses</p>
+        
+        <div class="queue-info">
+            <div class="queue-number">No. Antrian: <span id="queueNumber">A001</span></div>
+            <div class="queue-status">Siap diambil dalam 10-15 menit</div>
+        </div>
+
+        <div class="next-steps">
+            <h3>Selanjutnya:</h3>
+            <div class="step">1. Tunggu pesanan selesai</div>
+            <div class="step">2. Ambil pesanan dengan nomor antrian</div>
+            <div class="step">3. Nikmati kopi Anda ☕</div>
+        </div>
+
+        <button class="btn-home" onclick="window.location.href='dashboard.html'">
+            🏠 Pesan Lagi
+        </button>
+    </div>
+    <script>
+        document.getElementById('queueNumber').textContent = 
+            'A' + Math.floor(Math.random() * 999).toString().padStart(3, '0');
+    </script>
+</body>
+</html>

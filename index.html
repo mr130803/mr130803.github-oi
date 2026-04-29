@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Cafe In Aja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="logo.png" alt="Cafe In Aja">
+        </div>
+
+        <!-- Form -->
+        <div class="form-box">
+            <input type="text" id="username" placeholder=" Username" maxlength="20">
+            <input type="password" id="password" placeholder=" Password" maxlength="20">
+            
+            <button class="login-btn" id="loginBtn">
+                MASUK
+            </button>
+            
+            <button class="register-btn" onclick="showRegister()">
+                DAFTAR AKUN BARU
+            </button>
+        </div>
+    </div>
+
+    <!-- Success message -->
+    <div id="successMsg" class="success">
+        Login berhasil
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

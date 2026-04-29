@@ -1,0 +1,49 @@
+<!-- PROFIL PAGE -->
+<div id="profilePage" class="page">
+    <div class="profile-container">
+        <h2>👤 Profil Saya</h2>
+        
+        <!-- Profile Card Utama -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="" alt="Avatar" id="profileAvatar">
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="profilePoints">0</span>
+                        <span class="stat-label">Points</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="profileOrdersCount">0</span>
+                        <span class="stat-label">Pesanan</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-info">
+                <h3 id="profileName">Loading...</h3>
+                <p id="profileEmail">Loading...</p>
+                <p id="profilePhone">Loading...</p>
+                <p id="profileAddress">Loading...</p>
+                <p class="join-date">
+                    <span>📅 Bergabung sejak: </span>
+                    <span id="profileJoinDate">Loading...</span>
+                </p>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="profile-actions">
+            <button class="edit-btn primary" onclick="editProfile()">
+                ✏️ Edit Profil
+            </button>
+            <button class="change-password-btn" onclick="changePassword()">
+                🔐 Ganti Password
+            </button>
+            <button class="upgrade-btn" onclick="upgradeMembership()">
+                ⭐ Upgrade Membership
+            </button>
+        </div>
+    </div>
+</div>

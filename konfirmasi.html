@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Konfirmasi Pesanan - Cafe In Aja</title>
+<link rel="stylesheet" href="konfirmasi.css">
+</head>
+<div class="header">
+    <div class="logo-1">
+        <img src="logo.png" alt="Logo-1">
+        <h1>CAFE IN AJA</h1>
+    </div>
+
+   
+</div>
+<body>
+
+
+<div class="container">
+    <div class="title">KONFIRMASI PESANAN</div>
+
+    <div class="list" id="orderList"></div>
+
+    <div class="total" id="totalHarga"></div>
+  
+
+        <div class="action-buttons">
+            <button class="btn-secondary" onclick="tambahPesanan()">
+                Tambah Pesanan
+            </button>
+            <button class="btn-primary" onclick="bayar()">
+                Bayar Sekarang
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<script src="konfirmasi.js"></script>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+
+            <h2>CAFE IN AJA <br><span>Sip Your Coffee, Feel The Vibe</span></h2>
+            <div class="contact">
+                <p>📧 cafeinaja@gmail.com</p>
+                <p>📞 0831-4186-9561</p>
+                <p>📍 pangkalpinang</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div>
+                <h4>Menu</h4>
+                <ul>
+                    <li>Coffee</li>
+                    <li>Non Coffee</li>
+                    <li>Food</li>
+                    <li>Promo</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li>Tentang Kami</li>
+                    <li>Kontak</li>
+                    <li>Karir</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h4>Stay Connected!</h4>
+            <div class="subscribe">
+                <input type="email" id="emailInput" placeholder="Email untuk promo">
+                <button onclick="subscribeNewsletter()">Berlangganan</button>
+            </div>
+            <div class="social">
+                <span onclick="openSocial('instagram')">📷</span>
+                <span onclick="openSocial('facebook')">📘</span>
+                <span onclick="openSocial('tiktok')">🎵</span>
+                <span onclick="openSocial('whatsapp')">💬</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 CAFE IN AJA. All Rights Reserved.</p>
+        <div>
+            <span>Privacy Policy</span> |
+            <span>Terms of Service</span> |
+            <span>Return Policy</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

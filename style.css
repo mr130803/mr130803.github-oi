@@ -1252,3 +1252,161 @@ input:focus {
     transform: scale(1.02);
     box-shadow: 0 8px 25px rgba(91,44,27,0.3);
 }
+/* ==================== SIDEBAR & FOOTER MOBILE PERFECT ==================== */
+
+/* 1. SIDEBAR DASHBOARD MOBILE FIX */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 85vw !important;
+        max-width: 320px;
+        right: -100% !important; /* Full hide */
+    }
+    
+    .sidebar.active {
+        right: 0 !important;
+    }
+    
+    .menu-btn {
+        z-index: 5000 !important;
+        position: fixed !important;
+        top: 15px !important;
+        right: 15px !important;
+    }
+    
+    /* Overlay backdrop */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+    
+    .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .sidebar ul li {
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .logout {
+        position: static !important;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+/* 2. FOOTER GLOBAL MOBILE FIX (SEMUA PAGE!) */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 30px 25px 20px !important;
+        margin-top: 40px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 25px 15px 15px !important;
+        margin-top: 30px !important;
+    }
+    
+    .footer-container {
+        flex-direction: column !important;
+        gap: 25px !important;
+        text-align: center !important;
+    }
+    
+    /* FIX LOGO POSITION */
+    .logo img {
+        position: static !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 70px !important;
+        height: 70px !important;
+        margin: 0 auto 10px !important;
+        display: block;
+    }
+    
+    .footer-left h2 {
+        position: static !important;
+        left: 0 !important;
+        top: 0 !important;
+        text-align: center !important;
+        font-size: 22px !important;
+    }
+    
+    .contact p {
+        position: static !important;
+        top: 0 !important;
+    }
+    
+    .footer-links {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px !important;
+        justify-items: center !important;
+    }
+    
+    .footer-bottom {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .footer-left h2 {
+        font-size: 20px !important;
+    }
+}
+
+/* 3. GLOBAL CONTAINER FIX (Semua page) */
+@media (max-width: 768px) {
+    .container, .main-container {
+        width: 95% !important;
+        max-width: 95% !important;
+        padding: 20px 15px !important;
+        margin: 10px auto !important;
+    }
+}
+
+/* 4. HEADER GLOBAL MOBILE */
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 15px !important;
+        position: relative !important;
+    }
+    
+    .logo-1 h1 {
+        font-size: 18px !important;
+    }
+}
+
+/* 5. PREVENT OVERFLOW GLOBAL */
+html, body {
+    overflow-x: hidden !important;
+}
+
+@media (max-width: 768px) {
+    * {
+        max-width: 100% !important;
+    }
+    
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}

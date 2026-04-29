@@ -653,3 +653,201 @@ body::before {
         justify-content: center;
     }
 }
+/* ==================== PAYMENT MOBILE PERFECT ==================== */
+
+/* 1. FIX MAIN CONTAINER (MASALAH #1!) */
+@media (max-width: 1024px) {
+    .main-container {
+        width: 90%;
+        padding: 40px 25px;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        width: 95%;
+        padding: 25px 15px;
+        margin: 5px auto;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        width: 100%;
+        padding: 20px 12px;
+        margin: 0;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+/* 2. FIX HEADER MOBILE */
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .logo-1 h1 {
+        font-size: 18px;
+    }
+    
+    .header-title {
+        font-size: 14px;
+        padding: 5px 12px;
+    }
+}
+
+/* 3. FIX TITLE (MASALAH #2!) */
+@media (max-width: 768px) {
+    .title {
+        width: 90%;
+        margin: 15px auto 20px;
+        font-size: clamp(20px, 6vw, 24px);
+        padding: 12px 15px;
+        position: static;
+    }
+}
+
+/* 4. PAYMENT CONTAINER MOBILE */
+@media (max-width: 768px) {
+    .payment-container {
+        padding: 20px 15px;
+        margin: 10px 0;
+        border-radius: 15px;
+    }
+}
+
+/* 5. ORDER SUMMARY MOBILE */
+@media (max-width: 768px) {
+    .total-row {
+        font-size: clamp(24px, 8vw, 32px) !important;
+    }
+    
+    #totalAmount {
+        font-size: clamp(26px, 7vw, 30px);
+    }
+    
+    .summary-row {
+        font-size: 14px;
+    }
+}
+
+/* 6. METHODS GRID MOBILE */
+@media (max-width: 768px) {
+    .methods-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .method-card {
+        padding: 18px 15px;
+    }
+    
+    .method-emoji {
+        font-size: 24px;
+    }
+}
+
+/* 7. BANK GRID MOBILE */
+@media (max-width: 768px) {
+    .bank-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 10px;
+    }
+    
+    .bank-option {
+        padding: 12px 8px;
+    }
+    
+    .bank-option span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bank-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 8. QRIS MOBILE */
+@media (max-width: 768px) {
+    .qris-image, .qris-code {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .qris-amount {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+}
+
+/* 9. BUTTONS MOBILE */
+@media (max-width: 768px) {
+    .confirm-btn, .btn-qris, .btn-confirm {
+        padding: 16px 20px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+    
+    .bank-options {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .bank-card {
+        min-width: 100%;
+    }
+}
+
+/* 10. ORDER DETAILS MOBILE */
+@media (max-width: 768px) {
+    .order-details, .total {
+        padding: 15px 12px;
+        font-size: clamp(14px, 4vw, 16px);
+        max-height: 250px;
+    }
+    
+    .order-item-detail {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+}
+
+/* 11. PANELS MOBILE */
+@media (max-width: 768px) {
+    .bank-panel, .qris-panel, .confirm-section {
+        padding: 20px 15px;
+        margin: 15px 0;
+    }
+}
+
+/* 12. FOOTER MOBILE */
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 30px;
+        padding: 25px 15px;
+    }
+}
+
+/* 13. PREVENT ZOOM & PERFECT FIT */
+html {
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    input, button, select {
+        font-size: 16px; /* iOS zoom fix */
+    }
+    
+    body {
+        padding-bottom: 20px;
+    }
+}

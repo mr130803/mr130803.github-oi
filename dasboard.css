@@ -674,3 +674,217 @@ body::before {
         justify-content: center;
     }
 }
+/* ==================== MOBILE RESPONSIVE FIX ==================== */
+
+/* 1. TAMBAHKAN META VIEWPORT di HTML (WAJIB!) */
+@media print {
+    @page { margin: 0; }
+}
+
+/* 2. HEADER MOBILE */
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .logo-1 h1 {
+        font-size: 18px;
+    }
+    
+    .search {
+        margin: 0;
+        max-width: 100%;
+        order: 3; /* Pindah ke bawah */
+    }
+    
+    .search input {
+        font-size: 16px; /* Hindari zoom */
+    }
+    
+    .menu-btn {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 5000;
+        order: 1;
+    }
+}
+
+/* 3. SIDEBAR MOBILE */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80vw;
+        max-width: 300px;
+    }
+    
+    .sidebar h3, .sidebar h4 {
+        font-size: 16px;
+    }
+}
+
+/* 4. MENU GRID MOBILE (MASALAH UTAMA!) */
+@media (max-width: 768px) {
+    .menu {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 12px;
+        padding: 15px;
+    }
+    
+    .card img {
+        height: 100px;
+    }
+    
+    .card h4, .price {
+        font-size: 13px;
+    }
+    
+    .add {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .card {
+        min-height: 160px;
+    }
+}
+
+/* 5. CATEGORIES MOBILE */
+@media (max-width: 768px) {
+    .categories {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 15px;
+        justify-content: center;
+    }
+    
+    .cat {
+        padding: 8px 16px;
+        font-size: 13px;
+        flex: 1 1 120px;
+        text-align: center;
+        min-width: 100px;
+    }
+}
+
+/* 6. ORDER FOOTER MOBILE (Sudah bagus, tambah fix) */
+@media (max-width: 480px) {
+    .order-footer {
+        padding: 15px;
+    }
+    
+    .confirm-btn {
+        padding: 16px;
+        font-size: 16px;
+    }
+}
+
+/* 7. FOOTER MOBILE PERFECT */
+@media (max-width: 768px) {
+    .footer {
+        padding: 25px 15px 15px;
+        margin-top: 30px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+    
+    .logo img {
+        position: static;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .footer-left h2 {
+        position: static;
+        font-size: 20px;
+        left: 0;
+        top: 0;
+    }
+    
+    .footer-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+    
+    .subscribe {
+        flex-direction: column;
+    }
+    
+    .subscribe button {
+        border-radius: 0 0 25px 25px;
+        width: 100%;
+    }
+}
+
+/* 8. CONTAINER UTAMA (Tambahkan class ini ke body atau main) */
+.main-container {
+    padding: 20px 15px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 9. BACKGROUND FIX MOBILE */
+@media (max-width: 768px) {
+    body::before {
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+/* 10. TEXT PREVENT ZOOM */
+@media (max-width: 768px) {
+    input, button, select, textarea {
+        font-size: 16px; /* Prevent iOS zoom */
+    }
+    
+    .logo-1 h1 {
+        font-size: 18px;
+    }
+}
+
+/* 11. HIDE OVERFLOW */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    padding-bottom: 100px; /* Space untuk order footer */
+}
+
+/* 12. PERFECT RESPONSIVE CONTAINER */
+@media (max-width: 768px) {
+    .menu, .categories, .footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

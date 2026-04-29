@@ -487,3 +487,143 @@ font-size: 30px;
         justify-content: center;
     }
 }
+/* ==================== KONFIRMASI MOBILE PERFECT ==================== */
+
+/* 1. FIX CONTAINER (MASALAH UTAMA!) */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+        padding: 40px 20px;
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 25px 15px;
+        margin: 10px auto;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 20px 12px;
+        margin: 5px auto;
+        border-radius: 10px;
+    }
+}
+
+/* 2. FIX TITLE */
+@media (max-width: 768px) {
+    .title {
+        position: static;
+        font-size: clamp(22px, 6vw, 28px);
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+}
+
+/* 3. FIX TEXT & BUTTON */
+@media (max-width: 768px) {
+    .list {
+        font-size: clamp(16px, 4vw, 18px);
+        line-height: 1.6;
+    }
+    
+    .total {
+        font-size: clamp(20px, 5vw, 24px);
+        margin-top: 25px;
+        text-align: center;
+    }
+    
+    .btn, .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+        margin: 15px auto;
+        font-size: clamp(16px, 4vw, 18px);
+        padding: 14px 20px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        position: static !important;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+/* 4. ORDER ITEM MOBILE */
+@media (max-width: 768px) {
+    .order-item {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+    
+    .item-left {
+        text-align: center;
+    }
+    
+    .item-right {
+        align-items: center;
+        width: 100%;
+    }
+    
+    .quantity-controls {
+        order: -1;
+    }
+    
+    .item-total {
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-item {
+        padding: 12px;
+    }
+    
+    .item-name {
+        font-size: 16px;
+    }
+    
+    .qty-minus, .qty-plus {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+}
+
+/* 5. FOOTER MOBILE (Sudah bagus, tambah spacing) */
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 30px;
+        padding: 25px 15px 15px;
+    }
+}
+
+/* 6. PREVENT ZOOM & OVERFLOW */
+@media (max-width: 768px) {
+    input, button, select {
+        font-size: 16px; /* iOS zoom fix */
+    }
+    
+    html, body {
+        overflow-x: hidden;
+    }
+    
+    body {
+        padding-bottom: 20px;
+    }
+}
+
+/* 7. EMPTY STATE MOBILE */
+@media (max-width: 768px) {
+    .list:empty::before {
+        padding: 30px 20px;
+        font-size: 16px;
+    }
+}

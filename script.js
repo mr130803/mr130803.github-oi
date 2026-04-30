@@ -223,7 +223,7 @@ function registerUser() {
         }
         
         showNotification(`Pendaftaran berhasil! Selamat datang ${fullName}! ☕✨`, "success");
-        setTimeout(() => window.location.href = 'index.html', 3000);
+        setTimeout(() => window.location.href = '../html/index.html', 3000);
     }, 2000);
 }
 
@@ -232,7 +232,7 @@ function registerUser() {
 // ========================================
 function checkAuth() {
     if (!sessionStorage.getItem('loggedInUser')) {
-        window.location.href = 'index.html';
+        window.location.href = '../html/index.html';
     }
 }
 
@@ -368,7 +368,7 @@ function showProfile() {
 function logout() {
     if (confirm('Yakin logout?')) {
         sessionStorage.clear();
-        window.location.href = 'index.html';
+        window.location.href = '../html/index.html';
     }
 }
 
@@ -396,7 +396,7 @@ function checkPasswordStrength() {
 }
 
 function showNotification(message, type = "info") {
-    const isRegisterPage = window.location.pathname.includes('register.html');
+    const isRegisterPage = window.location.pathname.includes('../html/register.html');
     let notification = document.getElementById("successMsg");
     let errorNotification = document.getElementById("errorMsg");
     
@@ -442,7 +442,7 @@ function hideAllNotifications() {
 // ========================================
 window.login = login;
 window.registerUser = registerUser;
-window.showRegister = () => window.location.href = 'register.html';
+window.showRegister = () => window.location.href = '../html/register.html';
 window.showForgotPassword = () => showNotification("Hubungi admin 📞", "info");
 window.showProfile = showProfile;
 window.logout = logout;
@@ -542,12 +542,12 @@ const users = {
     'admin123': {
         password: 'admin123',
         role: 'admin',
-        redirect: './admin.html' // PATH LENGKAP
+        redirect: '../html/admin.html' // PATH LENGKAP
     },
     'bardapur123': {
         password: 'bardapur123', 
         role: 'bardapur',
-        redirect: './bardapur.html' // PATH LENGKAP
+        redirect: '../html/bardapur.html' // PATH LENGKAP
     }
 };
 

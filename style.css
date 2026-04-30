@@ -20,7 +20,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('kopi.png') top no-repeat;
+    background: url('../aset/kopi.png') top no-repeat;
     background-size: 2000px;
     z-index: -1;
 }
@@ -1408,5 +1408,361 @@ html, body {
     img {
         max-width: 100% !important;
         height: auto !important;
+    }
+}
+/* ========================================
+   MOBILE-FIRST RESPONSIVE SYSTEM
+   ======================================= */
+
+/* BASE MOBILE STYLES (Prioritas Tertinggi) */
+@media (max-width: 480px) {
+    * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    html, body {
+        overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        height: 100%;
+    }
+    
+    /* CONTAINER PERFECT MOBILE */
+    .container, .main-container, .dashboard {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px 12px !important;
+        margin: 0 !important;
+        min-height: 100vh;
+    }
+    
+    /* HEADER MOBILE PERFECT */
+    .header {
+        padding: 12px 15px !important;
+        position: relative !important;
+        z-index: 1000 !important;
+    }
+    
+    .header-left {
+        gap: 10px !important;
+    }
+    
+    .logo-small {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    
+    .header-left h1 {
+        font-size: 1.2rem !important;
+        letter-spacing: 0 !important;
+    }
+    
+    .header-right {
+        gap: 8px !important;
+    }
+    
+    .header-btn {
+        padding: 8px 12px !important;
+        font-size: 0.8rem !important;
+        border-radius: 20px !important;
+    }
+    
+    /* FORM MOBILE PERFECT */
+    .form-box {
+        padding: 25px 20px !important;
+        margin: 10px 5px !important;
+        border-radius: 20px !important;
+    }
+    
+    input {
+        padding: 15px 15px !important;
+        font-size: 16px !important; /* Prevent zoom */
+        margin: 12px 0 !important;
+    }
+    
+    .login-btn, .register-btn {
+        padding: 15px !important;
+        font-size: 16px !important;
+        border-radius: 40px !important;
+    }
+    
+    /* LOGO MOBILE */
+    .logo img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    .logo h2 {
+        font-size: 1.8em !important;
+        letter-spacing: 1px !important;
+    }
+    
+    /* DASHBOARD MOBILE */
+    .dashboard {
+        margin-top: 70px !important;
+        padding: 15px 12px !important;
+    }
+    
+    .welcome-section {
+        padding: 25px 20px !important;
+        margin-bottom: 25px !important;
+        border-radius: 20px !important;
+    }
+    
+    .welcome-section h2 {
+        font-size: 1.6rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    /* MENU GRID MOBILE */
+    .menu-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        margin-bottom: 120px !important;
+    }
+    
+    .menu-card {
+        border-radius: 20px !important;
+        margin: 0 2px !important;
+    }
+    
+    .menu-image {
+        height: 180px !important;
+    }
+    
+    .menu-info {
+        padding: 20px 15px !important;
+    }
+    
+    .menu-info h4 {
+        font-size: 1.1rem !important;
+    }
+    
+    /* CART SUMMARY MOBILE */
+    .cart-summary {
+        padding: 15px 12px !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
+    
+    .cart-info {
+        order: 2;
+        font-size: 1rem !important;
+    }
+    
+    .confirm-order-btn {
+        order: 1;
+        width: 100% !important;
+        padding: 16px !important;
+        font-size: 1rem !important;
+    }
+    
+    /* MODAL MOBILE PERFECT */
+    .modal-content {
+        width: 95% !important;
+        max-width: 95% !important;
+        margin: 20px !important;
+        border-radius: 20px !important;
+    }
+    
+    .modal-body {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 20px 15px !important;
+    }
+    
+    .modal-image {
+        width: 120px !important;
+        height: 120px !important;
+        margin: 0 auto 20px !important;
+    }
+    
+    .quantity-selector {
+        gap: 15px !important;
+        padding: 20px 15px !important;
+    }
+    
+    .qty-btn {
+        width: 45px !important;
+        height: 45px !important;
+    }
+    
+    /* NOTIFICATIONS MOBILE */
+    .success, .error, .notification {
+        top: 10px !important;
+        right: 10px !important;
+        left: 10px !important;
+        padding: 15px !important;
+        font-size: 16px !important;
+        border-radius: 15px !important;
+        transform: none !important;
+    }
+    
+    .success.show, .error.show {
+        transform: translateX(0) !important;
+    }
+    
+    /* CART DRAWER MOBILE */
+    .cart-drawer {
+        width: 100vw !important;
+        right: -100vw !important;
+    }
+    
+    .cart-drawer.open {
+        right: 0 !important;
+    }
+    
+    .drawer-content {
+        border-radius: 0 !important;
+        width: 100vw !important;
+    }
+    
+    /* FOOTER MOBILE */
+    .footer {
+        padding: 25px 15px 20px !important;
+        margin-top: 30px !important;
+    }
+    
+    .footer-container {
+        flex-direction: column !important;
+        gap: 25px !important;
+        text-align: center !important;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+}
+
+/* TABLET MOBILE (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container, .dashboard {
+        width: 95% !important;
+        padding: 20px 15px !important;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+    
+    .menu-card {
+        margin: 0 !important;
+    }
+    
+    .cart-summary {
+        padding: 20px 15px !important;
+        flex-direction: row !important;
+    }
+    
+    .header {
+        padding: 15px 20px !important;
+    }
+}
+
+/* SAFE AREA IPHONE (Notch Support) */
+@supports(padding: max(0px)) {
+    @media (max-width: 480px) {
+        .header {
+            padding-top: max(20px, env(safe-area-inset-top)) !important;
+            padding-bottom: max(15px, env(safe-area-inset-bottom)) !important;
+        }
+        
+        .cart-summary {
+            padding-bottom: max(25px, env(safe-area-inset-bottom)) !important;
+        }
+    }
+}
+
+/* PREVENT ZOOM ON INPUT FOCUS */
+input, select, textarea {
+    font-size: 16px !important;
+}
+
+/* TOUCH FRIENDLY BUTTONS */
+@media (max-width: 768px) {
+    button, .btn, .login-btn, .register-btn, .header-btn, .qty-btn {
+        min-height: 48px !important;
+        min-width: 48px !important;
+        padding: 12px 20px !important;
+        border-radius: 12px !important;
+    }
+    
+    .menu-card {
+        margin-bottom: 20px !important;
+    }
+}
+
+/* HIDE SCROLLBARS MOBILE */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 0px !important;
+        background: transparent !important;
+    }
+    
+    .modal-content {
+        max-height: 90vh !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+}
+
+/* PERFECT TEXT SIZING MOBILE */
+@media (max-width: 480px) {
+    h1 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    h3 { font-size: 1.3rem !important; }
+    h4 { font-size: 1.1rem !important; }
+    
+    p, .menu-info p {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+    }
+}
+
+/* FIX FOR DYNAMIC VIEWPORT */
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
+/* ANDROID WEBKIT FIX */
+@supports (-webkit-appearance: none) {
+    @media (max-width: 480px) {
+        input {
+            -webkit-appearance: none !important;
+        }
+    }
+}
+
+/* PERFECT MODAL MOBILE */
+@media (max-width: 480px) {
+    .modal-overlay.active {
+        padding: 20px !important;
+    }
+    
+    .modal-footer {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+    
+    .btn {
+        padding: 15px !important;
+    }
+}
+
+/* EMERGENCY OVERFLOW FIX */
+@media (max-width: 480px) {
+    .menu-grid, .welcome-section, .form-box {
+        overflow: hidden !important;
+        word-break: break-word !important;
+    }
+    
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
     }
 }

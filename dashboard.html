@@ -3,13 +3,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Cafe</title>
-    <link rel="stylesheet" href="dasboard.css">
+    <link rel="stylesheet" href="../css/dasboard.css">
 </head>
 
 <!-- HEADER -->
 <div class="header">
     <div class="logo-1">
-        <img src="logo.png" alt="Logo-1">
+        <img src="../aset/logo.png" alt="Logo-1">
         <h1>CAFE IN AJA</h1>
     </div>
 
@@ -17,44 +17,15 @@
         <input type="text" placeholder=" Cari menu..." id="searchInput">
     </div>
 
+    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+</div>
 
 <!-- SIDEBAR -->
-     <div class="sidebar-overlay" onclick="closeSidebar()"></div>
-    
-    <!-- Header -->
-    <header class="header">
-        <!-- menu button -->
-        <div class="menu-btn" onclick="toggleSidebar()">☰</div>
-    </header>
-    
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <!-- sidebar content -->
-    </div>
 <div class="sidebar" id="sidebar">
     <div class="logo-1">
-        <img src="logo.png" alt="Logo-1">
+        <img src="../aset/logo.png" alt="Logo-1">
         <h3>CAFE IN AJA</h3>
         <div class="menu-btn" onclick="toggleSidebar()"><H4>X</H4></div>
-        <script>
-function toggleSidebar() {
-    document.getElementById('sidebar').classList.toggle('active');
-    document.querySelector('.sidebar-overlay').classList.toggle('active');
-}
-
-function closeSidebar() {
-    document.getElementById('sidebar').classList.remove('active');
-    document.querySelector('.sidebar-overlay').classList.remove('active');
-}
-
-// Close sidebar saat resize desktop
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-        document.getElementById('sidebar').classList.remove('active');
-        document.querySelector('.sidebar-overlay').classList.remove('active');
-    }
-});
-</script>
     </div>
     
     <ul>
@@ -63,7 +34,7 @@ window.addEventListener('resize', function() {
         <li onclick="goToSupport()">📞 Customer Service</li>
     </ul>
 
-       <div class="logout" onclick="logout(); return false;">🚪 Logout</div>
+       <div class="logout-btn" onclick="logout(); return false;"> Logout</div>
 </div>
    
 </div>
@@ -94,13 +65,13 @@ window.addEventListener('resize', function() {
         </button>
     </div>
 </div>
-<script src="dasboard.js"></script>
+<script src="../js/dasboard.js"></script>
 <!-- FOOTER CAFE IN AJA -->
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-left">
             <div class="logo">
-        <img src="logo.png" alt="Logo">
+        <img src="../aset/logo.png" alt="Logo">
     </div>
 
             <h2>CAFE IN AJA <br><span>Sip Your Coffee, Feel The Vibe</span></h2>

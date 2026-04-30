@@ -17,7 +17,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('kopi.png') top no-repeat;
+    background: url('../aset/kopi.png') top no-repeat;
     background-size: 2000px;
     z-index: -1;
 }
@@ -161,13 +161,13 @@ body::before {
     right: 0;
 }
 
-.logout {
+.logout-btn {
     position: absolute;
     bottom: 30px;
     left: 20px;
     right: 20px;
     padding: 15px; /* Tambah padding */
-    background: linear-gradient(135deg, #dc3545, #c82333);
+    background: #5b2c1be0;
     color: white;
     text-align: center;
     border-radius: 12px;
@@ -427,8 +427,10 @@ body::before {
     background: linear-gradient(to right, #5b2c1b, #8b4513, #a0522d);
     color: #fff;
     padding: 40px 60px 20px;
-    margin-top: 60px; /* Space dari order footer */
+    
+    margin-top: 70px; /* Space dari order footer */
     position: relative;
+    top: 100px;
 }
 
 .footer::before {

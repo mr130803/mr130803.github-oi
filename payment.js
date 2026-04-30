@@ -74,7 +74,7 @@ function confirmQris() {
 function completePayment(method) {
     localStorage.removeItem('cart');
     if (method == 'qris'){
-    window.location.href = 'sukses.html';}
+    window.location.href = '../html/sukses.html';}
     else if (method == 'debit'){window.location.href = 'sukses.html';}
     else if (method == 'cash'){window.location.href = 'proses.html';}
 }

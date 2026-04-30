@@ -1,35 +1,35 @@
 // DATA MENU - LENGKAP DENGAN GAMBAR SESUAI NAMA
 const menuData = [
     // COFFEE
-    {id: 1, name: "Americano", price: 10000, img: "americano.png", category: "coffee"},
-    {id: 2, name: "Latte", price: 20000, img: "latte.png", category: "coffee"},
-    {id: 3, name: "Kopi Susu Aren", price: 18000, img: "kopisusuarren.png", category: "coffee"},
-    {id: 4, name: "Espresso", price: 15000, img: "espresso.png", category: "coffee"},
-    {id: 5, name: "Cappuccino", price: 22000, img: "cappuccino.png", category: "coffee"},
-    {id: 6, name: "Mocha", price: 25000, img: "mocha.png", category: "coffee"},
+    {id: 1, name: "Americano", price: 10000, img: "../aset/americano.png", category: "coffee"},
+    {id: 2, name: "Latte", price: 20000, img: "../aset/latte.png", category: "coffee"},
+    {id: 3, name: "Kopi Susu Aren", price: 18000, img: "../aset/kopisusuarren.png", category: "coffee"},
+    {id: 4, name: "Espresso", price: 15000, img: "../aset/espresso.png", category: "coffee"},
+    {id: 5, name: "Cappuccino", price: 22000, img: "../aset/cappuccino.png", category: "coffee"},
+    {id: 6, name: "Mocha", price: 25000, img: "../aset/mocha.png", category: "coffee"},
 
     // NON-COFFEE
-    {id: 7, name: "Teh Tarik", price: 12000, img: "tehtarik.png", category: "non-coffee"},
-    {id: 8, name: "Matcha Latte", price: 23000, img: "matchalatte.png", category: "non-coffee"},
-    {id: 9, name: "Green Tea", price: 18000, img: "greentea.png", category: "non-coffee"},
-    {id: 10, name: "Jasmine Tea", price: 17000, img: "jasminetea.png", category: "non-coffee"},
-    {id: 11, name: "Lemon Tea", price: 19000, img: "lemontea.png", category: "non-coffee"},
-    {id: 12, name: "Thai Tea", price: 25000, img: "thaitea.png", category: "non-coffee"},
-    {id: 13, name: "Milk Tea", price: 22000, img: "milktea.png", category: "non-coffee"},
-    {id: 14, name: "Winter Melon", price: 21000, img: "wintermelon.png", category: "non-coffee"},
-    {id: 15, name: "Rose Tea", price: 23000, img: "rosetea.png", category: "non-coffee"},
+    {id: 7, name: "Teh Tarik", price: 12000, img: "../aset/tehtarik.png", category: "non-coffee"},
+    {id: 8, name: "Matcha Latte", price: 23000, img: "../aset/matchalatte.png", category: "non-coffee"},
+    {id: 9, name: "Green Tea", price: 18000, img: "../aset/greentea.png", category: "non-coffee"},
+    {id: 10, name: "Jasmine Tea", price: 17000, img: "../aset/jasminetea.png", category: "non-coffee"},
+    {id: 11, name: "Lemon Tea", price: 19000, img: "../aset/lemontea.png", category: "non-coffee"},
+    {id: 12, name: "Thai Tea", price: 25000, img: "../aset/thaitea.png", category: "non-coffee"},
+    {id: 13, name: "Milk Tea", price: 22000, img: "../aset/milktea.png", category: "non-coffee"},
+    {id: 14, name: "Winter Melon", price: 21000, img: "../aset/wintermelon.png", category: "non-coffee"},
+    {id: 15, name: "Rose Tea", price: 23000, img: "../aset/rosetea.png", category: "non-coffee"},
 
     // FOOD
-    {id: 16, name: "Sapi Lada Hitam", price: 35000, img: "sapi_ladahitam.png", category: "food"},
-    {id: 17, name: "Ayam Bakar", price: 25000, img: "ayambakar.png", category: "food"},
-    {id: 18, name: "Ayam Goreng", price: 25000, img: "ayamgoreng.png", category: "food"},
-    {id: 19, name: "Nasi Goreng Ayam", price: 28000, img: "nasigorengayam.png", category: "food"},
-    {id: 20, name: "Nasi Goreng Sapi", price: 28000, img: "nasigorengsapi.png", category: "food"},
-    {id: 21, name: "Mie Indomie Goreng", price: 18000, img: "mieindomiegoreng.png", category: "food"},
-    {id: 22, name: "Mie Indomie Kuah", price: 18000, img: "mieindomiekuah.png", category: "food"},
-    {id: 23, name: "Sate Ayam", price: 26000, img: "sateayam.png", category: "food"},
-    {id: 24, name: "Ikan Bakar", price: 36000, img: "ikanbakar.png", category: "food"},
-    {id: 25, name: "Nasi Putih", price: 6000, img: "nasi_putih.png", category: "food"}
+    {id: 16, name: "Sapi Lada Hitam", price: 35000, img: "../aset/sapi_ladahitam.png", category: "food"},
+    {id: 17, name: "Ayam Bakar", price: 25000, img: "../aset/ayambakar.png", category: "food"},
+    {id: 18, name: "Ayam Goreng", price: 25000, img: "../aset/ayamgoreng.png", category: "food"},
+    {id: 19, name: "Nasi Goreng Ayam", price: 28000, img: "../aset/nasigorengayam.png", category: "food"},
+    {id: 20, name: "Nasi Goreng Sapi", price: 28000, img: "../aset/nasigorengsapi.png", category: "food"},
+    {id: 21, name: "Mie Indomie Goreng", price: 18000, img: "../aset/mieindomiegoreng.png", category: "food"},
+    {id: 22, name: "Mie Indomie Kuah", price: 18000, img: "../aset/mieindomiekuah.png", category: "food"},
+    {id: 23, name: "Sate Ayam", price: 26000, img: "../aset/sateayam.png", category: "food"},
+    {id: 24, name: "Ikan Bakar", price: 36000, img: "../aset/ikanbakar.png", category: "food"},
+    {id: 25, name: "Nasi Putih", price: 6000, img: "../aset/nasi_putih.png", category: "food"}
 ];
 
 let cart = [];
@@ -251,7 +251,7 @@ function goToSupport() {
 
 function checkAuth() {
     if (!sessionStorage.getItem('loggedInUser')) {
-        window.location.href = 'index.html';
+        window.location.href = '../html/index.html';
     }
 }
 

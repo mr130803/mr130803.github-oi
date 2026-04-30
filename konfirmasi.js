@@ -93,7 +93,7 @@ function updateQuantity(index, change) {
 }
 
 function tambahPesanan() {
-    window.location.href = "dashboard.html";
+    window.location.href = "../html/dashboard.html";
 }
 
 function bayar() {
